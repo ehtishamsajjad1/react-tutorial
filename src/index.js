@@ -1,17 +1,17 @@
+// First thing is we are going to import React and React Dom
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import ReactDom from 'react-dom';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+// Componet name 'Greetings' must be capital. We can use both function or ES6
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+const Greetings = () => {
+	return (
+		<>
+			<h1>Hi, This is my first React Component</h1>
+		</>
+	);
+};
+
+// Now we will render it to the root of index.html
+
+ReactDom.render(<Greetings />, document.getElementById('root'));
