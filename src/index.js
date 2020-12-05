@@ -36,6 +36,10 @@ const Image = () => {
 };
 
 const Title = () => <h3> If Animals Kissed Good Night </h3>;
-const Author = () => <h4> Ann Whitford Paul </h4>;
+
+// JSX CSS Syntax
+const Author = () => (
+	<h4 style={{ fontSize: '1.2em', color: '#888888' }}>Ann Whitford Paul</h4>
+);
 
 ReactDom.render(<Booklist />, document.getElementById('root'));
