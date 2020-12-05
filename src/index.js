@@ -1,17 +1,38 @@
-// First thing is we are going to import React and React Dom
+// Creating a book list
+
 import React from 'react';
 import ReactDom from 'react-dom';
 
-// Componet name 'Greetings' must be capital. We can use both function or ES6
-
-const Greetings = () => {
+const Booklist = () => {
 	return (
-		<>
-			<h1>Hi, This is my first React Component</h1>
-		</>
+		<section>
+			<Book />
+			<Book />
+			<Book />
+		</section>
 	);
 };
 
-// Now we will render it to the root of index.html
+const Book = () => {
+	return (
+		<section>
+			<Image />
+			<Title />
+			<Author />
+		</section>
+	);
+};
 
-ReactDom.render(<Greetings />, document.getElementById('root'));
+const Image = () => {
+	return (
+		<img
+			src='https://images-na.ssl-images-amazon.com/images/I/817T4J3dzhL._AC_UL200_SR200,200_.jpg'
+			alt='Cover of the Book'
+		/>
+	);
+};
+
+const Title = () => <h3> If Animals Kissed Good Night </h3>;
+const Author = () => <h4> Ann Whitford Paul </h4>;
+
+ReactDom.render(<Booklist />, document.getElementById('root'));
